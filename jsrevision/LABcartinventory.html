@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="button" onclick="start()" value="click" id="button">
+    <div id="root">
+
+    </div>
+
+    <script>
+    function start(){
+    
+        function createitems(name,id,cost,quantity){
+            return{
+                name:name,
+                id:id,
+                cost:cost,
+                quant:quantity,
+                total_value:()=>{return (cost*quantity)}
+
+           }
+        }
+        
+        var a=createitems("laptop",001,100000,10);
+        var b=createitems("server",002,1200,34);
+        var c=createitems("keyboard",003,800,20);
+        var d=createitems("mouse",004,300,45);
+        var e=createitems("webcamera",005,1000,34);
+
+        var total=a.total_value()+b.total_value()+c.total_value()+d.total_value()+e.total_value();
+        var content = document.createElement('div');
+        const article="NAME:---------"+a.name+"<br>     ID OF PRODUCT------------"+a.id+"  <br>QUANTITY---------------"+a.quant+"<br>    cost-----------"+a.cost+"<br>"+"total:-------"+a.total_value();
+    
+        const article2="NAME:--------"+b.name+"<br>    ID OF PRODUCT:------------"+b.id+" <br>  QUANTITY:--------------"+b.quant+" <br>   cost:----------"+b.cost+"<br>"+"total:-------"+b.total_value();
+        
+        const article3="NAME:--------"+c.name+"<br>    ID OF PRODUCT:------------"+c.id+" <br>  QUANTITY:--------------"+c.quant+" <br>   cost:----------"+c.cost+"<br>"+"total:-------"+c.total_value();
+
+        const article4="NAME:--------"+d.name+"<br>    ID OF PRODUCT:------------"+d.id+" <br>  QUANTITY:--------------"+d.quant+" <br>   cost:----------"+d.cost+"<br>"+"total:-------"+d.total_value();
+
+        const article5="NAME:--------"+e.name+"<br>    ID OF PRODUCT:------------"+e.id+" <br>  QUANTITY:--------------"+e.quant+" <br>   cost:----------"+e.cost+"<br>"+"total:-------"+e.total_value();
+
+        content.innerHTML='<div>'+article+"</div><br><hr>"+'<div>'+article2+'</div><hr>'+'<div>'+article3+'</div><hr>'+'<div>'+article4+'</div><hr>'+'<div>'+article5+'</div><hr>'
+        
+        document.getElementById('root').append(content);        
+
+        document.getElementById('root').append(`Total value of the inventory is ${total}`);
+
+    }
+    </script>
+</body>
+</html>

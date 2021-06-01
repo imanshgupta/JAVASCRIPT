@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CGPA</title>
+  </head>
+  <body>
+    <script>
+      choice = prompt("enter your choice 1 for sgpa 2 for cgpa");
+      if (choice == 1) calculate_Sgpa();
+      else claculate_Cgpa();
+
+      function calculate_Sgpa() {
+        var marks = prompt("enter marks obtained");
+        var total_marks = prompt("enter total marks obtained");
+        function closure_sgpa() {
+          var sgpa = (marks / total_marks) * 100;
+          document.write("SGPA IS" + sgpa);
+        }
+        closure_sgpa();
+      }
+
+      function claculate_Cgpa() {
+        var sem = prompt("enter number of semesters");
+        var credits = new Array(sem);
+        var total = new Array(sem);
+        for (i = 0; i < sem; i++) {
+          credits[i] = prompt("enter number in " + (i + 1) + "sem");
+          total[i] = prompt("total number in that sem");
+        }
+        function closure_cgpa() {
+          var sgpas = new Array(sem);
+          var sum;
+          for (i = 0; i < sem; i++) {
+            sgpas[i] = (credits[i] / total[i]) * 100;
+            sum += sgpas[i];
+          }
+          var cgpa = sum / sem;
+          document.write("SGPA" + cgpa);
+        }
+        closure_cgpa();
+      }
+    </script>
+  </body>
+</html>

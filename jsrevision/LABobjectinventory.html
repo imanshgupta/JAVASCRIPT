@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="init()">
+    <div id="root"></div>
+    <script>
+        class Inventory{
+            constructor(Name,ID,Price)
+            {
+                this.Name=Name;
+                this.ID=ID;
+                this.Price=Price;
+            }
+
+             stockInfo() {
+                 
+                 const Name=document.createElement('div');
+                 const ID=document.createElement('div');
+                 const Price=document.createElement('div');
+                 const divider=document.createElement('div');
+
+                 //stockInfo.setAttribute('No',stockInfo);
+
+                 Name.innerHTML=`Product Name: ${this.Name}`;
+                 ID.innerHTML=`ID: ${this.ID}`;
+                 Price.innerHTML=`Price:${this.Price}`;
+
+                 
+                 document.getElementById('root').appendChild(divider);
+                 document.getElementById('root').appendChild(Name);
+                 document.getElementById('root').appendChild(ID);
+                 document.getElementById('root').appendChild(Price);
+                 document.getElementById('root').appendChild(divider);
+
+        
+            }
+        }
+        function init(){
+            const title = document.createElement('h1');
+            title.innerHTML='INVENTORY MANAGEMENT SYSTEM';
+
+            const divider = document.createElement('hr');
+
+            document.getElementById('root').appendChild(title);
+            document.getElementById('root').appendChild(divider);
+
+
+            const ob1=new Inventory("notebooks","001",70000);
+            const ob2=new Inventory("sheets","002",30000);
+            const ob3=new Inventory("pens","003",20000);
+
+            ob1.stockInfo();
+            ob2.stockInfo();
+            ob3.stockInfo();
+        }
+        
+    </script>
+</body>
+</html>
