@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head></head>
+<body>
+<script>
+var Person = {
+    typeName: "Person",
+    properties: {
+    firstName: {range:"NonEmptyString", label:"First name",
+    writable: true, enumerable: true},
+    lastName: {range:"NonEmptyString", label:"Last name",
+    writable: true, enumerable: true}
+    },
+    methods: {
+    getInitials: function () {
+    return this.firstName.charAt(0) + this.lastName.charAt(0);
+    }
+    },
+    create: function (slots) {
+    var obj=null, properties = this.properties;
+    // create object
+    obj = Object.create( this.methods, properties);
+    // add property slot for direct type
+    Object.defineProperty( obj, "type",
+    {value: this, writable: false, enumerable: true});
+    // initialize object
+    Object.keys( slots).forEach( function (prop) {
+    if (properties[prop]) obj[prop] = slots[prop];
+    })
+    return obj;
+    }
+    };
+    var pers1 = Person.create( {firstName:"Tom", lastName:"Smith"});
+    alert("The initials of the person are: " + pers1.getInitials());
+
+</script>
+
+</body>
+    </html>
