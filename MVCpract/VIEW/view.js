@@ -1,0 +1,5 @@
+init.view.display={
+    information:{
+        
+    }
+}
