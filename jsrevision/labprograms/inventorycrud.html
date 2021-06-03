@@ -8,8 +8,8 @@
 </head>
 <body>
     <form >
-        <label for="naem">PRODUCT NAME</label>
-        <input type="text" name="name" >
+        <label for="name">PRODUCT NAME</label>
+        <input type="text" name="name">
         <br>
         <Label>ID OF PRODUCT</Label>
         <input type="text" name="id" required>
@@ -39,6 +39,7 @@
                }
             }
         arr=[];
+        //arr=[{},{}] 
         function addnewitem(form){
             document.getElementById('root').innerHTML="";
             var name=form.name.value;

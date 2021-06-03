@@ -1,5 +1,0 @@
-init.view.display={
-    information:{
-      
-    }
-}

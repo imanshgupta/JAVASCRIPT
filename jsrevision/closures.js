@@ -1,6 +1,6 @@
-var counter = () => {
+var counter = function(){
   var privatecounter = 0;
-  changeby = (val) => {
+  changeby = function(){
     privatecounter += val;
   };
 };
