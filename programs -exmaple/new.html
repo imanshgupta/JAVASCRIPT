@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<head>FACTOR FUNCTION EXAMPLE</head>
+<body>
+    <script>
+            /*function college(){
+            return{
+                colgname:'rv college',
+                city:function()
+                {return("city:bangalore");
+            }
+                    
+                };
+            }
+                var student = college();
+                document.write(student.colgname+""+student.city());*/
+
+
+            function college(college_id){
+                return{
+                    id:college_id,
+                    city:function(){
+                    return "bangalore";
+                    }
+
+                };
+
+            }
+                var student = college('rv123');
+		        var student1 = college('rvit123');
+                var student2 = college('rvt345');
+                
+                document.write(student.id+""+student.city()+"</br>");
+                document.write(student1.id+""+student1.city());
+
+
+
+    </script>
+
+</body>
