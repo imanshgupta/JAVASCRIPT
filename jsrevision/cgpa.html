@@ -30,7 +30,7 @@
           credits[i] = prompt("enter number in " + (i + 1) + "sem");
           total[i] = prompt("total number in that sem");
         }
-        function closure_cgpa() {
+        function closure() {
           var sgpas = new Array(sem);
           var sum;
           for (i = 0; i < sem; i++) {
@@ -40,7 +40,7 @@
           var cgpa = sum / sem;
           document.write("SGPA" + cgpa);
         }
-        closure_cgpa();
+        closure();
       }
     </script>
   </body>
