@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Class</h2>
+
+
+
+<p id="demo"></p>
+
+<script>
+class Car {
+  constructor(name, year) { //special object
+    this.name = name;
+    this.year = year;
+    this.show = function() {
+				return "Instance Method";
+  }
+}
+  display() {
+				return "Protoype Mehtod";
+  }
+}
+
+
+var myCar = new Car("Ford", 2014);
+var vechile= new Car ("Jeep", 2021);
+document.getElementById("demo").innerHTML =
+myCar.name + " " + myCar.year;
+document.write(vechile.name+""+vechile.year+vechile.show());
+
+</script>
+
+</body>
+</html>
+
