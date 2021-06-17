@@ -38,6 +38,8 @@
                     total_value:()=>{return (cost*quantity)}
                }
             }
+
+            
         arr=[];
         //arr=[{},{}] 
         function addnewitem(form){
@@ -46,7 +48,8 @@
             var id=form.id.value;
             var price=form.price.value;
             var quantity=form.quantity.value;
-            
+
+
             arr.push(createitems(name,id,price,quantity));
             arr.map((obj)=>{
                 var content = document.createElement('div');
@@ -57,7 +60,5 @@
                     });
         }
         </script>
-
-
 </body>
 </html>
