@@ -10,8 +10,9 @@ let obj={
 let newobj={
     ...obj,
     mind="jenius"//here thsi new object has all the members of the old object of name and age
-
 }
+
+
 //---------------------rest operator------------------------------
 //used to merge a lot of arguments into the function as an array 
 hellow=(...arg,...aar1) => console.log(aar1);
