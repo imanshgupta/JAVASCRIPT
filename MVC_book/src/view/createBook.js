@@ -1,9 +1,7 @@
 init.view.createBook = {
   setupUI: function () {
     const saveBtn = document.forms['Book'].commit; 
-
     Book.loadAll();
-
     saveBtn.addEventListener('click', init.view.createBook.handleSaveButtonClick);
   },
   handleSaveButtonClick: function () {

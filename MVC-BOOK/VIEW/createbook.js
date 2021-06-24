@@ -1,0 +1,15 @@
+init.view.createbook={
+    show:()=>{
+        document.forms['books'].commit.addEventListner('clicks',()=>{
+            data=document.forms['books'];
+            book={
+                isbn:data.isbn.value,
+                title:data.title.value,
+                year:data.year.value
+            }
+            Book.create(book);
+            data.reset();
+        })
+        Book.loadAll();
+    },
+}
