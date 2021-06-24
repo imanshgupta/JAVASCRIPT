@@ -40,16 +40,11 @@ class Book {
       throw Error('Can not save books to local storage');
     }
   }
-
   static create({ isbn, title, year }) {
     const book = new Book(isbn, title, year);
-
     const updatedInstances = { ...this.instances }; //Array + geting the exisitng books instances
-
     updatedInstances[`${isbn}`] = book;
-
     this.instances = updatedInstances;
-
     Book.save();
   }
 

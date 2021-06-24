@@ -1,15 +1,17 @@
 init.view.createbook={
     show:()=>{
-        document.forms['books'].commit.addEventListner('clicks',()=>{
-            data=document.forms['books'];
-            book={
-                isbn:data.isbn.value,
-                title:data.title.value,
-                year:data.year.value
-            }
-            Book.create(book);
-            data.reset();
-        })
-        Book.loadAll();
+        document.forms['Book'].addEventListner('click',init.views.createbook.make);
+        //Book.loadAll();
     },
+    make:()=>{
+        var data=document.forms['Book'];
+        var book={
+             isbn:data.isbn.value,
+             title:data.title.value,
+             year:data.title.value
+        }
+        Book.create(book);
+        data.reset();
+        
+    }
 }
