@@ -1,0 +1,126 @@
+body{
+    background-color: #f2b441;
+    
+}
+html, body {
+    height: 100%;
+    margin: 0;
+}
+#videowrapper{  
+    position: relative;
+    overflow: hidden;
+} 
+#fullScreenDiv{
+    min-height: 100%; 
+    height: 50h;
+    width: 100vw;
+    padding:20px;
+    margin: 100px;
+    background-color: rgb(20, 76, 167);
+    position: relative;
+    border-radius: 20px;
+}
+#fullScreenDiv1{
+    min-height: 100%; 
+    height: 100%;
+    width: 100vw;
+    padding:20px;
+    margin: 0px;
+    background-color: #f2b441;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+}
+
+#video{    
+    width: 50%; 
+    height: 1000px;
+    margin: auto;
+    display: block;
+}
+#video1{    
+    width: 100%; 
+    height:auto;
+    margin: auto;
+    display: block;
+}
+@media (min-aspect-ratio: 16/9) {
+  #video{
+    width: 100vw; 
+    height:auto;
+  }
+}
+
+@media (max-aspect-ratio: 16/9) {
+  #video {
+    height: 100vh; 
+    width:auto;
+    margin-left: 50vw;
+    transform: translate(-50%);
+  }
+}
+
+#videoMessage{
+    width: 100%; 
+    height: 100%;
+    position: absolute; 
+    top: 0; 
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+}
+#text2{
+    font-weight: 30px;
+    font-family: 'Dancing Script', cursive;
+    font-size: 50px;
+    position: relative;
+    top: 50%;
+}
+#videoMessage1{
+    width: 100%; 
+    height: 100%;
+    position: absolute; 
+    top: 0; 
+    left: 0;
+    display: flex;
+    justify-content:flex-start;
+    align-items:initial;
+    flex-direction: column;
+    
+}
+#lg{
+    font-family: 'Chango', cursive;
+    font-size: 200px;
+    color: #f2b441;
+    letter-spacing: 10px;
+}
+#cap{
+    font-family: 'Chango', cursive;
+    font-size: 50px;
+    color: #f2b441;
+    letter-spacing: 20px;
+}
+.text{
+    font-family: 'Syne Mono', monospace;
+    font-size: 80px;
+    color: #c7c7c7;
+    letter-spacing: 20px;
+}
+.text1{
+    font-family: 'Chango', cursive;
+    font-size: 20px;
+    color: rgb(27, 86, 182);
+    letter-spacing: 20px;
+}
+#bgcolor{
+    background-color: #f2b441;
+}
+.textnav{
+    font-family: 'Bebas Neue', cursive;
+    font-size: 50px;
+    color: rgb(20, 76, 167);;
+    letter-spacing: 20px;
+}

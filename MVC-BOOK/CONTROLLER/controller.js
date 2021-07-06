@@ -1,5 +1,6 @@
-var init={
-    model:{},
-    view:{},
-    controller:{}
-}
+let init = {
+    model: {},
+    view: {},
+    controller: {}
+  };
+  

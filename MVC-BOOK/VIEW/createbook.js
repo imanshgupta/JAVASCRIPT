@@ -1,17 +1,19 @@
-init.view.createbook={
-    show:()=>{
-        document.forms['Book'].addEventListner('click',init.views.createbook.make);
-        //Book.loadAll();
+init.view.createBook = {
+    setupUI: function () {
+      const saveBtn = document.forms['Book'].commit; 
+      Book.loadAll();
+      saveBtn.addEventListener('click', init.view.createBook.handleSaveButtonClick);
     },
-    make:()=>{
-        var data=document.forms['Book'];
-        var book={
-             isbn:data.isbn.value,
-             title:data.title.value,
-             year:data.title.value
-        }
-        Book.create(book);
-        data.reset();
-        
-    }
-}
+    handleSaveButtonClick: function () {
+      const formElement = document.forms['Book'];
+      const book = {
+        isbn: formElement.isbn.value,
+        title: formElement.title.value,
+        year: formElement.year.value,
+      };
+  
+      Book.create(book);
+      formElement.reset();
+    },
+  };
+  
