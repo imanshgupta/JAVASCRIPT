@@ -1,4 +1,4 @@
-let init={
+var initializer={
     model:{},
     view:{},
     controller:{}

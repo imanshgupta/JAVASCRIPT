@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="src/controller/controller.js"></script>
+    <script src="src/model/model.js"></script>
+    <script src="src/view/createstud.js"></script>
+    <script>
+        window.addEventListener('load',initializer.view.create.student);
+    </script>
+</head>
+<body>
+    <h1>student creation here</h1>
+    <form id="form">
+        <label for="">name <input type="text" name="name" id="name"></label>
+        <label for="">age <input type="number" name="age"  id="age"></label>
+        <label for=""> sem <input type="number" name="sem" id="sem"></label>
+        <p><input type="button" name="submit" id="submit" value="cllick to create"></p>
+    </form>
+</body>
+</html>
