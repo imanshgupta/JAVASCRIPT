@@ -50,4 +50,12 @@ class Dish{
         }
     }
 
+    static update(id,newdata){
+        const currdata=Dish.loadall();
+        var dish=currdata[id];
+        dish.name=newdata.name;
+        dish.price=newdata.price;
+        Dish.save();
+    }
+
 }
