@@ -20,8 +20,7 @@ init.view.delete={
         if (dishtoremove && confirm('Are you sure you want to delete this dish?')) {
             Dish.delete(dishtoremove);
             selectElement.remove(selectElement.selectedIndex);
-          }
-        
+        }
 
     }
 }
